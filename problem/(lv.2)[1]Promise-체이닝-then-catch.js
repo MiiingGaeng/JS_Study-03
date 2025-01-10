@@ -9,10 +9,7 @@
  * @returns {Promise<any>} - primary 혹은 fallback의 결과를 담은 Promise
  */
 async function getDataWithFallback(primary, fallback) {
-  const promiseData = new Promise(function (resolve, reject) {
-    resolve(primary());
-    reject(fallback());
-  });
+  return primary().catch(() => fallback());
 }
 // export를 수정하지 마세요.
 export { getDataWithFallback };

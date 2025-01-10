@@ -22,13 +22,14 @@ async function fetchUsers() {
 // TODO: getUsers 함수를 작성하세요.
 async function getUsers() {
   const data = await fetchUsers();
-  const userName = [];
+  // const userName = [];
 
-  data.forEach((user) => {
-    return userName.push(user['name']);
-  });
+  // data.forEach((user) => {
+  //   userName.push(user['name']);
+  // });
 
-  return userName;
+  // return userName;
+  return data.map((user) => user.name);
 }
 
 // export를 수정하지 마세요.

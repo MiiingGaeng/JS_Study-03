@@ -10,13 +10,11 @@
 
 // TODO: delay 함수를 작성하세요.
 async function delay(ms) {
-  try {
+  return new Promise((resolve) => {
     setTimeout(() => {
       resolve('done');
     }, ms);
-  } catch (err) {
-    console.log(err);
-  }
+  });
 }
 
 delay(1000);
