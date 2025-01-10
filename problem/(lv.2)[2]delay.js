@@ -9,7 +9,17 @@
  */
 
 // TODO: delay 함수를 작성하세요.
-async function delay(ms) {}
+async function delay(ms) {
+  try {
+    setTimeout(() => {
+      resolve('done');
+    }, ms);
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+delay(1000);
 
 // export를 수정하지 마세요.
 export { delay };

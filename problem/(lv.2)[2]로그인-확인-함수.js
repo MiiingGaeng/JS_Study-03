@@ -10,7 +10,27 @@
  */
 
 // TODO: loginRequest 함수를 작성하세요.
-async function loginRequest(id, pw) {}
+async function loginRequest(id, pw) {
+  try {
+    const logIn = new Promise((resolve, reject) => {
+      if (id === 'admin' && pw === '1234') {
+        resolve('ok');
+      } else {
+        reject('fail');
+      }
+    });
+
+    logIn
+      .then((res) => {
+        res;
+      })
+      .catch((err) => {
+        err;
+      });
+  } catch (err) {
+    return 'fail';
+  }
+}
 
 // export를 수정하지 마세요.
 export { loginRequest };
